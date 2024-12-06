@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Contenitore principale */
+.main-container {
+    display: flex;
+    justify-content: flex-start; /* Allinea elementi a sinistra */
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    gap: 20px; /* Spazio tra carosello e tabella */
+}
+
+/* Carosello */
+.carousel {
+    position: relative;
+    width: 60%; /* Occupa il 60% dello spazio disponibile */
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Tabella con campo di testo */
+.text-table table {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.text-table textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none; /* Rimuove il ridimensionamento */
+}
+
+/* Regola per ridimensionare le immagini nella tabella */
+table img {
+    height: 40px; /* Altezza uniforme per tutte le immagini */
+    vertical-align: middle; /* Centra verticalmente rispetto al testo */
+    margin: 0 5px; /* Spaziatura tra le immagini */
+}
+
+
+
+

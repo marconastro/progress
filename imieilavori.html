@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Carosello con campo di testo</title>
+</head>
+<body>
+    <!-- Tabella -->
+    <table style="width:100%; margin-bottom: 20px;">
+        <tr>
+            <th style="width:40%"><a href="index.html"> <img src="./img/download3.jpg" alt="Logo" style="height:40px;"></a></th>
+            <th style="width:20%"><a href="chisono.html" style="text-decoration: none; color: inherit;">CHI SONO</a></th>
+            <th style="width:20%"><a href="imieilavori.html" style="text-decoration: none; color: inherit;">I MIEI LAVORI</a></th>
+            <th style="width:20%"><a href="contatti.html" style="text-decoration: none; color: inherit;">CONTATTI</a></th>
+        </tr>
+    </table>
+        <table style="width:100%; margin-bottom: 20px;">
+            <tr>
+                <th style="width:100%">I MIEI LAVORI</th>
+            </tr>
+        </table>
+            <!-- per fare il collapse -->
+            <p> La mia esperienza presso l’azienda LEADER (<a href="#" onclick="mostraTabella('myTable1')">visualizza</a>)</p>
+            <!-- Tabella HTML -->
+            <table id="myTable1" border="1" style="width: 100%; margin-top: 10px;display:none;">
+                <tr>
+                    <th>AZIENDA</th>
+                    <th>RUOLO</th>
+                    <th>LINGUAGGIO</th>
+                </tr>
+                <tr>
+                    <td>LEADER</td>
+                    <td>CORSISTA</td>
+                    <td>PYTHON</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+            <p>CORSO CSS (<a href="#" onclick="mostraTabella('myTable2')">visualizza</a>)</p>
+            <!-- Tabella HTML -->
+            <table id="myTable2" border="1" style="width: 100%; margin-top: 10px;display:none;">
+                <tr>
+                    <th>AZIENDA</th>
+                    <th>RUOLO</th>
+                    <th>LINGUAGGIO</th>
+                </tr>
+                <tr>
+                    <td>LEADER</td>
+                    <td>CORSISTA</td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+            <p>CORSO JAVASCRIPT (<a href="#" onclick="mostraTabella('myTable3')">visualizza</a>)</p>
+            <!-- Tabella HTML -->
+            <table id="myTable3" border="1" style="width: 100%; margin-top: 10px;display:none;">
+                <tr>
+                    <th>AZIENDA</th>
+                    <th>RUOLO</th>
+                    <th>LINGUAGGIO</th>
+                </tr>
+                <tr>
+                    <td>LEADER</td>
+                    <td>CORSISTA</td>
+                    <td>JAVASCRIPT</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table style="width:100%; margin-bottom: 20px;">
+                    <tr>
+                        <th style="width:40%">REALIZZATO DA MARCO NASTRO</th>
+                        <th style="width:10%"></th>
+                        <th style="width:10%"></th>
+                        <th style="width:40%"> <img src="./img/fb.png" alt="Immagine 4"> <img src="./img/ig.jpg" alt="Immagine 5"> <img src="./img/wa.jpg" alt="Immagine 6"></th>
+                    </tr>
+                </table>
+
+            <script>
+                    // Funzione per nascondere/mostrare la tabella
+                    function mostraTabella(idTabella) {
+                        const table = document.getElementById(idTabella);
+                        // Se la tabella è visibile, la nasconde, altrimenti la mostra
+                        if (table.style.display === "none") {
+                            table.style.display = "table";
+                        } else {
+                            table.style.display = "none";
+                        }
+                    }
+                </script>
+            
+
+            <script src="./js/script.js"></script>
+        
+            
+        
+        </body>
+        </html>
+
+        

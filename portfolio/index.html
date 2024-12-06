@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Carosello con campo di testo</title>
+</head>
+<body>
+    <!-- Tabella -->
+    <table style="width:100%; margin-bottom: 20px;">
+        <tr>
+            <th style="width:40%"><img src="./img/download3.jpg" alt="Immagine"></th>
+            <th style="width:20%">CHI SONO</th>
+            <th style="width:20%">I MIEI LAVORI</th>
+            <th style="width:20%">CONTATTI</th>
+        </tr>
+    </table>
+
+    <!-- Contenitore principale per il carosello e la tabella -->
+    <div class="main-container">
+        <!-- Carosello -->
+        <div class="carousel">
+            <div class="slides">
+                <img src="./img/images.jpg" alt="Immagine 1">
+                <img src="./img/images2.jpg" alt="Immagine 2">
+                <img src="./img/download.jpg" alt="Immagine 3">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Tabella con campo di testo -->
+        <div class="text-table">
+            <table>
+                <tr>
+                    <td>
+                        <textarea placeholder="Scrivi qui..." rows="5" cols="30"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <table style="width:100%; margin-bottom: 20px;">
+        <tr>
+            <th style="width:40%">REALIZZATO DA MARCO NASTRO</th>
+            <th style="width:10%"></th>
+            <th style="width:10%"></th>
+            <th style="width:40%"> <img src="./img/fb.png" alt="Immagine 4"> <img src="./img/ig.jpg" alt="Immagine 5"> <img src="./img/wa.jpg" alt="Immagine 6"></th>
+        </tr>
+    </table>
+
+    <!-- Script per il carosello -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

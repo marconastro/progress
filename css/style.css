@@ -1,0 +1,200 @@
+/* Stile base per il layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Stile per il carosello */
+.carousel {
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.carousel .arrow.left {
+    left: 10px;
+}
+
+.carousel .arrow.right {
+    right: 10px;
+}
+
+/* Stile per la tabella */
+.info-table {
+    width: 35%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-table td {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+table img {
+    width: 50px; /* Larghezza desiderata */
+    height: auto; /* Mantiene le proporzioni */
+    margin: 5px; /* Spaziatura attorno alle immagini */
+}
+
+/* Layout principale */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altezza minima: viewport intero */
+    margin: 0; /* Rimuovi margini esterni */
+    padding: 0; /* Rimuovi padding esterno */
+    background-color: #beb190; /* Marrone "peanut" */
+    color: #ffffff; /* Testo bianco per contrasto */
+}
+
+/* Header */
+header {
+    margin-bottom: 40px; /* Spazio tra l'header e il contenuto */
+}
+
+/* Contenuto principale */
+.main-content {
+    flex: 1; /* Occupa lo spazio disponibile */
+    margin-bottom: 0; /* Rimuove margine inferiore */
+    padding-bottom: 40px; /* Usa padding per lo spazio visivo */
+}
+
+/* Footer */
+footer {
+    background-color: #deb887; /* Marroncino chiaro */
+    text-align: center;
+    padding: 20px; /* Spazio interno del footer */
+    border-top: 1px solid #a67b5b; /* Bordo superiore */
+    margin-top: 0; /* Nessun margine superiore */
+}
+
+/* Tabelle */
+table {
+    background-color: #a69567; /* Marrone "caffè" */
+    border-collapse: collapse; /* Rimuove spazi tra celle */
+    width: 100%;
+    color: #ffffff; /* Testo bianco per contrasto */
+}
+
+/* Celle delle tabelle */
+th, td {
+    padding: 10px; /* Spaziatura interna */
+    text-align: center; /* Allineamento centrale */
+}
+
+/* Contenitore principale */
+.main-container {
+    display: flex;
+    justify-content: flex-start; /* Allinea elementi a sinistra */
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    gap: 10px; /* Riduce lo spazio tra il carosello e la tabella */
+}
+
+/* Tabella con campo di testo */
+.text-table {
+    margin-left: -20px; /* Sposta la tabella più a sinistra */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.text-table textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none; /* Rimuove il ridimensionamento */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+}
+
+table input, table textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+  
+  
+  
+
+
+

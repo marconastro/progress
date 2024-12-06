@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Carosello con campo di testo</title>
+</head>
+<body>
+    <!-- Tabella -->
+    <table style="width:100%; margin-bottom: 20px;">
+        <tr>
+            <th style="width:40%"><img src="./img/download3.jpg" alt="Immagine"></th>
+            <th style="width:20%">CHI SONO</th>
+            <th style="width:20%">I MIEI LAVORI</th>
+            <th style="width:20%">CONTATTI</th>
+        </tr>
+    </table>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modulo di Contatto</h1>
+    <form id="contactForm">
+        <!-- Nome -->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" title="Il nome deve contenere solo lettere alfabetiche">
+
+        <!-- Cognome -->
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" title="Il cognome deve contenere solo lettere alfabetiche">
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required 
+            pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" title="Inserisci un'email valida contenente @">
+
+        <!-- Numero di telefono -->
+        <label for="telefono">Numero di Telefono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Inserisci il tuo numero di telefono" required 
+            pattern="^\d{10}$" title="Il numero di telefono deve essere esattamente di 10 cifre">
+
+        <!-- Oggetto -->
+        <label for="oggetto">Oggetto</label>
+        <input type="text" id="oggetto" name="oggetto" placeholder="Inserisci l'oggetto" required 
+            maxlength="10" title="L'oggetto non deve superare i 10 caratteri">
+
+        <!-- Messaggio -->
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" rows="4" placeholder="Scrivi il tuo messaggio" required 
+            maxlength="100" title="Il messaggio non deve superare i 100 caratteri"></textarea>
+
+        <!-- Pulsante di invio -->
+        <button type="submit">Invia</button>
+    </form>
+
+    <div class="success-message" id="successMessage">I dati sono stati inviati correttamente!</div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impedisce il comportamento predefinito di invio del form
+
+            // Validazioni
+            const nome = document.getElementById('nome').value.trim();
+            const cognome = document.getElementById('cognome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const oggetto = document.getElementById('oggetto').value.trim();
+            const messaggio = document.getElementById('messaggio').value.trim();
+
+            const nomeRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+            const telefonoRegex = /^\d{10}$/;
+            const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+            if (!nomeRegex.test(nome)) {
+                alert("Il nome deve contenere solo lettere alfabetiche!");
+                return;
+            }
+            if (!nomeRegex.test(cognome)) {
+                alert("Il cognome deve contenere solo lettere alfabetiche!");
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                alert("Inserisci un'email valida!");
+                return;
+            }
+            if (!telefonoRegex.test(telefono)) {
+                alert("Il numero di telefono deve essere esattamente di 10 cifre!");
+                return;
+            }
+            if (oggetto.length > 10) {
+                alert("L'oggetto non deve superare i 10 caratteri!");
+                return;
+            }
+            if (messaggio.length > 100) {
+                alert("Il messaggio non deve superare i 100 caratteri!");
+                return;
+            }
+
+            // Mostra il messaggio di successo
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
